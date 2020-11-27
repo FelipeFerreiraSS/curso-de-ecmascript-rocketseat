@@ -41,6 +41,7 @@ TodoList.addTodo();
 TodoList.addTodo();
 */
 
+/*
 //metodo dois
 class Matematica {
     static soma(a, b) {
@@ -49,3 +50,24 @@ class Matematica {
 }
 
 console.log(Matematica.soma(1, 2));
+*/
+
+//******************* Const & Let
+/*
+const a = 1;  //não pode mudar o valor
+
+const usuario = { nome: 'Felipe'};  //Mutação
+usuario.nome = 'Cleiton';
+console.log(usuario);
+
+//função de escopo
+function teste(x) {
+    let y = 2;
+    if (x > 5) {
+        let y = 4;
+
+        console.log(x, y);
+    }
+}
+teste(10);
+*/
