@@ -1,3 +1,5 @@
+"use strict";
+
 // ****************Class 
 
 /*
@@ -100,4 +102,26 @@ const find = arr.find(function(item) {
 });
 console.log(find);
 */
-"use strict";
+// ***********************Arrow Functions
+var arr = [1, 2, 3, 4, 5, 6, 7];
+var newArr = arr.map(function (item) {
+  //função anonima mormal fica asimm↓↓↓↓↓↓↓
+  return item * 2;
+});
+console.log(newArr); //↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓
+
+var arr2 = [1, 2, 3, 4, 5, 6, 7];
+var newArr2 = arr.map(function (item) {
+  return item * 2;
+}); //Bem mais resumida e com o mesmo funcionamento
+
+console.log(newArr2);
+
+var teste = function teste() {
+  return {
+    nome: 'Diego'
+  };
+}; //se quiser colocar um nome coloque ({nome})
+
+
+console.log(teste());

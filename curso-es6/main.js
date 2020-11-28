@@ -102,4 +102,20 @@ const find = arr.find(function(item) {
 console.log(find);
 */
 
+// ***********************Arrow Functions
 
+const arr = [1, 2, 3, 4, 5, 6, 7];
+
+const newArr = arr.map(function(item) {  //função anonima mormal fica asimm↓↓↓↓↓↓↓
+    return item * 2;
+});
+console.log(newArr);
+
+//↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓
+
+const arr2 = [1, 2, 3, 4, 5, 6, 7];
+const newArr2 = arr.map(item => item * 2);    //Bem mais resumida e com o mesmo funcionamento
+console.log(newArr2);
+
+const teste = () => ({ nome: 'Diego' });  //se quiser colocar um nome coloque ({nome})
+console.log(teste());
