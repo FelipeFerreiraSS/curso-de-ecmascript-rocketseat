@@ -1,3 +1,5 @@
+//Conceitos basicos
+
 // ****************Class 
 
 /*
@@ -209,6 +211,7 @@ console.log(`Meu nome é ${nome} e tenho ${idade} anos.`);
 */
 
 //************************* Object Short Syntax
+/*
 const nome = "Felipe";
 const idade = 21;
 const usuario = {
@@ -218,3 +221,35 @@ const usuario = {
 };
 
 console.log(usuario);
+*/
+
+// *********************** Async/await
+/*
+const minhaPromise = () => new Promise((resolve, reject) => {
+    setTimeout(() => { resolve('Ok') }, 2000);
+});
+
+async function executaPromise() {
+    console.log(await minhaPromise());
+    console.log(await minhaPromise());
+    console.log(await minhaPromise());
+}
+
+executaPromise();
+*/
+
+//************************* Comfigurando axios
+
+import axios from 'axios';
+
+class Api {
+    static async getUserInfo(username) {
+        try {
+        const response = await axios.get(`https://api.github.com/users/${username}`);
+        console.log(response);
+        } catch (err) {
+            console.warn("Erro na API")
+    }   }
+}
+
+Api.getUserInfo('FelipeFerreiraSS');

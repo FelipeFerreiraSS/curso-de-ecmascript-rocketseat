@@ -1,5 +1,4 @@
-"use strict";
-
+//Conceitos basicos
 // ****************Class 
 
 /*
@@ -208,11 +207,17 @@ const idade = 21;
 console.log(`Meu nome é ${nome} e tenho ${idade} anos.`);
 */
 //************************* Object Short Syntax
-var nome = "Felipe";
-var idade = 21;
-var usuario = {
-  nome: nome,
-  idade: idade,
-  empresa: "Rocketseat"
+
+/*
+const nome = "Felipe";
+const idade = 21;
+const usuario = {
+    nome,
+    idade,
+    empresa: "Rocketseat"
 };
+
 console.log(usuario);
+*/
+// *********************** Comfigurando o Webpack
+"use strict";
