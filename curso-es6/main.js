@@ -104,6 +104,7 @@ console.log(find);
 
 // ***********************Arrow Functions
 
+/*
 const arr = [1, 2, 3, 4, 5, 6, 7];
 
 const newArr = arr.map(function(item) {  //função anonima mormal fica asimm↓↓↓↓↓↓↓
@@ -119,3 +120,101 @@ console.log(newArr2);
 
 const teste = () => ({ nome: 'Diego' });  //se quiser colocar um nome coloque ({nome})
 console.log(teste());
+*/
+
+// ************************Valores padrão
+/*
+function soma(a= 3, b= 6) {
+    return a + b;
+}
+
+console.log(soma(1));
+console.log(soma());
+
+const soma = (a = 3, b = 6) => a + b;
+
+console.log(soma(1));
+console.log(soma());
+*/
+
+// ************************Desestruturação
+/*
+const usuario = {
+    nome: "Felipe",
+    idade: 21,
+    endereco: {
+        cidade: "Carmo do Paraíba",
+        estado: "MG"
+    },
+};
+
+const { nome, idade, endereco: { cidade } } = usuario;
+console.log(nome);
+console.log(idade);
+console.log(cidade);
+
+//OU
+function mostraNome({ nome, idade }) {
+    console.log(nome, idade)
+}
+mostraNome(usuario);
+*/
+
+//********************Operadores rest/spread ...
+/*
+//REST (resto)
+const usuario = {
+    nome: "Felipe",
+    idade: 21,
+    empresa: "Rochetseat"
+};
+const { nome, ...resto } = usuario;
+console.log(nome);
+console.log(resto);
+//OUTRA
+const arr = [1, 2, 3, 4, 5]
+const [ a, b, ...c ] = arr;
+console.log(a);
+console.log(b);
+console.log(c);
+//OUTRA
+function soma(...params) {
+    return params.reduce((total, next) => total + next);
+}
+console.log(soma(1, 3, 4));
+
+//SPREAD (repaça informações)
+
+const arr1 = [1, 2, 3, 4];
+const arr2 = [5, 6, 7, 8];
+const arr3 = [ ...arr1, ...arr2 ];
+console.log(arr3);
+//OUTRA
+
+const usuario1 = {
+    nome: "Felipe",
+    idade: 21,
+    empresa: "Rochetseat"
+};
+const usuario2 = { ...usuario1, nome: "João" };
+console.log(usuario2);
+*/
+
+//************************* Templete Literals
+/*
+const nome = "Felipe";
+const idade = 21;
+
+console.log(`Meu nome é ${nome} e tenho ${idade} anos.`);
+*/
+
+//************************* Object Short Syntax
+const nome = "Felipe";
+const idade = 21;
+const usuario = {
+    nome,
+    idade,
+    empresa: "Rocketseat"
+};
+
+console.log(usuario);
